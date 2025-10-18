@@ -1,4 +1,4 @@
-# 📚 Library Management System — Django Backend
+# 📚 Library Management System
 
 > _“A library is not a luxury but one of the necessities of life.”_ — Henry Ward Beecher  
 
