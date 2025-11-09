@@ -1,0 +1,53 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}Library Management Admin{% endblock %}
+
+{% block branding %}
+<h1 id="site-name" style="font-size: 26px; color: #fff;">
+    📚 Library Management Admin
+</h1>
+{% endblock %}
+
+{% block extrastyle %}
+<style>
+/* Change admin header color */
+#header {
+    background-color: #2a3f54;
+    color: white;
+    padding: 15px 30px;
+    border-bottom: 3px solid #1abb9c;
+}
+
+/* Change sidebar background */
+.module caption {
+    background: #1abb9c !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Style login page */
+body.login {
+    background: linear-gradient(120deg, #1abc9c, #3498db);
+}
+
+#container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+.button, .submit-row input {
+    background-color: #1abb9c !important;
+    color: white !important;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: #1a73e8;
+}
+</style>
+{% endblock %}

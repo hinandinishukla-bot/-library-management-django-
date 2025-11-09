@@ -11,9 +11,12 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # Quick-start development settings - unsuitable for production
@@ -39,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "rest_framework",
     "corsheaders",
-    "core",
+    'library_management',
+    
 ]
 
 MIDDLEWARE = [
@@ -57,13 +61,13 @@ ROOT_URLCONF = 'library_management.urls'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # change if frontend runs on a different port
 ]
-AUTH_USER_MODEL = "core.User"
+#AUTH_USER_MODEL = "auth.User"
 
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates', BASE_DIR / 'library_management' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,6 +78,10 @@ TEMPLATES = [
         },
     },
 ]
+
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/dashboard/'
+LOGOUT_REDIRECT_URL = '/login/'
 
 WSGI_APPLICATION = 'library_management.wsgi.application'
 

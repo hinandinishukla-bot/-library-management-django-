@@ -1,0 +1,12 @@
+<!-- library_management/templates/book_form.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <h3>{% if book %}Edit{% else %}Add{% endif %} Book</h3>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn" type="submit">Save</button>
+  </form>
+</div>
+{% endblock %}
