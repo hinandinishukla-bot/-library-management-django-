@@ -1,128 +1,38 @@
-📚 Library Management System (LMS)
+📚 Library Management System (Admin)
 
 “A library is not a luxury but one of the necessities of life.” — Henry Ward Beecher
 
-The Library Management System (LMS) is a Django-based application designed to simplify the management of books, borrowing, and user interactions.
-Built using Django 5.x, SQLite3, and HTML/CSS, the system now supports both Admin and User roles and integrates with the OpenLibrary API to fetch book details automatically.
+This is the Admin interface of the Library Management System (LMS), built using Django 5.x. It allows admins to manage books, users, borrowing/returning workflows, and overall library operations efficiently. The system integrates with the OpenLibrary API to automatically fetch book metadata.
 
-🌟 Overview
+🌟 Admin Features
+1. Book Management
 
-The LMS provides two types of access:
+Add Books: Add new books manually or fetch book details automatically using OpenLibrary API (by ISBN, title, or author).
 
-👨‍💼 Admin
+Edit Books: Update title, author, publisher, publish year, number of copies, and cover image.
 
-Has full control over book records, users, and borrowing operations.
+Delete Books: Remove outdated or damaged books.
 
-👤 Users
+Manage Copies: Track total and available copies for each book.
 
-Regular users can view books, borrow books, return books, and add reviews.
+2. Borrow & Return Management
 
-The system also connects to the OpenLibrary API, enabling automatic retrieval of book information such as:
+Issue Books: Assign books to users with borrow and due dates.
 
-Title
+Track Returns: Mark books as returned and update availability.
 
-Author
+Overdue Monitoring: Identify and manage overdue books.
 
-Cover Image
+3. User Management
 
-ISBN details
+View Users: See registered users and their borrowing activity.
 
-This reduces manual data entry and makes book management faster and more accurate.
+Role Management: Assign roles (Admin/User).
 
-🔑 Core Features
-🧾 Book Management (Admin)
+Deactivate Users: Block or deactivate accounts if needed.
 
-Admins can:
+4. Dashboard Overview
 
-Add new books (with OpenLibrary auto-fill)
+Quick statistics of all books, borrowed books, overdue returns, and reviews.
 
-Edit book information
-
-Delete books
-
-Manage book availability
-
-Upload or fetch book covers
-
-📦 Borrow & Return System
-Admin Capabilities
-
-Issue books to users
-
-Set borrowing and due dates
-
-View overdue books
-
-Mark books as returned
-
-User Capabilities
-
-Request to borrow a book
-
-Return borrowed books
-
-Track borrowing history
-
-📝 Reviews & Ratings (Users)
-
-Users can:
-
-Add reviews to books
-
-Rate books (1–5 stars)
-
-Edit or delete their own reviews
-
-🔐 Authentication & Authorization
-
-Django’s built-in authentication system
-
-Role-based access:
-
-Admin → full CRUD operations
-
-User → controlled borrowing + review features
-
-Secure session-based login
-
-🤖 OpenLibrary API Integration
-
-Using the external OpenLibrary API, admins can fetch book details by:
-
-ISBN
-
-Title
-
-Author
-
-This includes:
-
-Metadata (title, author, publisher, publish year)
-
-High-quality book covers
-
-Unique identifiers
-
-This removes the need for manual entry and speeds up book registration.
-
-🏗️ Tech Stack
-Component	Technology
-Framework	Django 5.x
-Database	SQLite3
-Language	Python 3.11+
-Frontend	HTML + CSS
-External API	OpenLibrary API
-Version Control	Git + GitHub
-🎯 Final Result
-
-A fully functional Admin + User Library Management System with:
-
-Modern UI
-
-Automated book data retrieval
-
-Borrow/return workflows
-
-Review system
-
-Secure role-based access
+Easy navigation for managing library operations.
